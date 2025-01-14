@@ -25,10 +25,10 @@ impl ClipboardManager {
         self.clipboard.get_text().unwrap_or_default()
     }
     pub fn get_and_update(&mut self) {
-        let got = self.get();
-        if self.last.is_some() && self.last.clone().unwrap() == got {
+        let from_local = self.get();
+        if self.last.is_some() && self.last.clone().unwrap() == from_local {
             return;
         }
-        self.last = Some(got);
+        self.last = Some(from_local);
     }
 }

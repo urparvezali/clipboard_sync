@@ -1,6 +1,5 @@
-use std::{sync::Arc, time::Duration};
-
 use clipboard_manager::ClipboardManager;
+use std::{sync::Arc, time::Duration};
 use tokio::{
     io::{AsyncReadExt, AsyncWriteExt},
     net::TcpListener,
